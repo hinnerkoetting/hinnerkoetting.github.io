@@ -1,0 +1,25 @@
+apply plugin: 'war' 
+
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+    runtime group: 'de.oetting.bumping-bunnies', name: 'bunnies-pc', version: '0.0.1-SNAPSHOT',  classifier: 'jar-with-dependencies'
+}
+
+configurations.all {
+    transitive = false
+}
+
+
+task copy(type: Copy) {
+	configurations.runtime.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+	    project.copy {
+	      from artifact.file
+	      into "files"
+	      rename { "bumping-bunnies.jar" }
+	    }
+    }
+}
+
