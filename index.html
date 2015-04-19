@@ -42,11 +42,10 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Bumping Bunnies</a>
+				<a class="navbar-brand" href="#home">Bumping Bunnies</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
 					<li><a href="#download">Download</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -54,56 +53,82 @@
 			<!--/.nav-collapse -->
 		</div>
 	</div>
+	<section id="background-section" data-speed="4" data-type="background">
+	</section>
 
-	<div class="container">
+	<section id="content-section" data-speed="1" data-type="background">
+		<div class="container">
 
-		<div class="jumbotron">
-			<h1>Bumping Bunnies</h1>
+
+			<div class="jumbotron">
+				<h1 id="home">Bumping Bunnies</h1>
+				<p>
+					Bumping bunnies is a remake of <a
+						href="http://brainchilddesign.com/Bottom.php?Page=Games&SubPage=JnB">Jump'n
+						Bump</a>.<br /> Play against friends on a single PC, via WLAN or
+					Bluetooth.
+				</p>
+			</div>
+
+			<h1 class="page-header" id="download">Download</h1>
 			<p>
-				Bumping bunnies is a remake of <a href="http://brainchilddesign.com/Bottom.php?Page=Games&SubPage=JnB">Jump'n Bump</a>.<br />
-				Play against friends on a single PC, via WLAN or Bluetooth.
+				<a
+					href="https://play.google.com/store/apps/details?id=de.oetting.bumpingbunnies"
+					class="btn btn-primary btn-lg" role="button">Android &raquo;</a> <a
+					href="files/bumping-bunnies.jar" class="btn btn-primary btn-lg"
+					role="button">PC and MAC &raquo;</a>
 			</p>
-		</div>
 
-		<h1 class="page-header" id="download">Download</h1>
-		<p>
-			<a href="https://play.google.com/store/apps/details?id=de.oetting.bumpingbunnies" class="btn btn-primary btn-lg" role="button">Android
-				&raquo;</a> <a href="files/bumping-bunnies.jar" class="btn btn-primary btn-lg" role="button">PC
-				and MAC &raquo;</a>
-		</p>
+			<h1 class="page-header" id="instructions">Instructions for PC
+				and MAC</h1>
 
-		<h1 class="page-header" id="instructions">Instructions for PC and MAC</h1>
+			Download <a href="files/bumping-bunnies.jar">bumping-bunnies.jar</a><br />
+			<a href="https://java.com/en/download/">Java 8</a> is required.
+			<p />
 
-		Download <a href="files/bumping-bunnies.jar">bumping-bunnies.jar</a><br />
-		<a href="https://java.com/en/download/">Java 8</a> is required.
-		<p />
+			<ol>
+				<li>Install Java 8 if necessary.</li>
+				<li>Double click bumping-bunnies.jar<br /> Or start it via
+					command line: <code> java -jar bumping-bunnies.jar</code></li>
+			</ol>
+			<h1 class="page-header" id="opensource">Open source</h1>
+			Bumping bunnies is open source. You can view the source on <a
+				href="TODO">Github</a>.
 
-		<ol>
-			<li>Install Java 8 if necessary.</li>
-			<li>Double click bumping-bunnies.jar<br /> Or start it via command
-				line: <code> java -jar bumping-bunnies.jar</code></li>
-		</ol>
-		<h1 class="page-header" id="opensource">Open source</h1>
-		Bumping bunnies is open source. You can view the source on <a
-			href="TODO">Github</a>.
+			<h1 class="page-header" id="contact">Contact</h1>
+			Contact me via <a href="replace-me" id="mail">E-Mail</a>
 			
-		<h1 class="page-header" id="contact">Contact</h1>
-		Contact me via <a href="replace-me"  id="mail">E-Mail</a>
-		<script type="text/javascript">
+			<script src="js/jquery.min.js"></script>
+			<script type="text/javascript">
 			function replaceEmail() {
 				$("#mail").attr("href", "mailto:" + createMail());
 			}
-			window.onload=replaceEmail;
+			
+			$(document).ready(function(){
+				 	 replaceEmail();
+
+				 	 $window = $(window);
+				 
+				   	 $('section[data-type="background"]').each(function(){
+				     var $scroll = $(this);
+				      $(window).scroll(function() {
+				        var yPos = -($window.scrollTop() / $scroll.data('speed'));
+				        var coords = '50% '+ yPos + 'px';
+				        $scroll.css({ backgroundPosition: coords });   
+				      }); 
+				   });  
+				});
+				document.createElement("section");
 		</script>
-	</div>
+		</div>
+	</section>
 
 	<!-- /.container -->
 
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/jquery.min.js"></script>
+	
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
