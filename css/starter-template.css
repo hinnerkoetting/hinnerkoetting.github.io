@@ -1,26 +1,30 @@
 body {
-  padding-top: 50px;
-}
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+	padding-top: 50px;
 }
 
-#background-section {
-    background: url(../images/screenshot.png) 100% 0 fixed;
-    height: auto; 
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    box-shadow: 0 0 100px rgba(0,0,0,0.8);
-    padding: 400px 0;
-    background-size:cover;
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
 }
+
+@media screen and (min-width: 600px) {
+	#background-section {
+		background: url(../images/screenshot.png) 100% 0 fixed;
+		height: auto;
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+		box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
+		padding: 400px 0;
+		background-size: cover;
+	}
+}
+
 #content-section {
-    height: auto; 
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    padding: 50px 0;
+	height: auto;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+	padding: 50px 0;
 }
