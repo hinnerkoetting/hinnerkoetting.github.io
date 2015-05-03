@@ -53,10 +53,10 @@
 			<!--/.nav-collapse -->
 		</div>
 	</div>
-	<section id="background-section" data-speed="2" data-type="background">
+	<section id="background-section" >
 	</section>
 
-	<section id="content-section" data-speed="1" data-type="background">
+	<section id="content-section" >
 		<div class="container">
 
 
@@ -97,7 +97,7 @@
 
 			<h1 class="page-header" id="contact">Contact</h1>
 			Contact me via <a href="replace-me" id="mail">E-Mail</a>
-			
+
 			<script src="js/jquery.min.js"></script>
 			<script type="text/javascript">
 			function replaceEmail() {
@@ -107,18 +107,8 @@
 			$(document).ready(function(){
 				 	 replaceEmail();
 
-				 	 $window = $(window);
-				 
-				   	 $('section[data-type="background"]').each(function(){
-				     var $scroll = $(this);
-				      $(window).scroll(function() {
-				        var yPos = -($window.scrollTop() / $scroll.data('speed'));
-				        var coords = '50% '+ yPos + 'px';
-				        $scroll.css({ backgroundPosition: coords });   
-				      }); 
 				   });  
 				});
-				document.createElement("section");
 		</script>
 		</div>
 	</section>
@@ -128,7 +118,7 @@
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-	
+
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
