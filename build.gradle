@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-    runtime group: 'de.oetting.bumping-bunnies', name: 'bunnies-pc', version: '0.6.1-SNAPSHOT',  classifier: 'jar-with-dependencies'
+    runtime group: 'de.oetting.bumping-bunnies', name: 'bunnies-pc', version: '0.6.2-SNAPSHOT',  classifier: 'jar-with-dependencies'
 }
 
 configurations.all {
