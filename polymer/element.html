@@ -51,19 +51,21 @@
 
 
 
-      <paper-material elevation="3">
+      <paper-material elevation="3" class="card" id="youtubeCard">
+        <h1 id="home">Watch on Youtube</h1>
         <div id="ytplayer"></div>
       </paper-material>
 
+      <paper-material elevation="3" class="card" id="contact">
+        <h1 id="home">Contact</h1>
+        <contact-card  class="layout horizontal starred">
+          <img src="images/contact.png" alt="contact" class="circle"/>
+          <div class="flex self-center" style="margin-left: 15px;">
+            Hinnerk Oetting
+          </div>
+        </contact-card>
+      </paper-material>
 
-
-
-
-      <paper-field id="core_field" icon="search" theme="core-light-theme" center horizontal layout>
-        <paper-input id="core_input" flex></core-input>
-        </paper-field>
-        <paper-item id="core_item" icon="settings" label="Item" horizontal center layout>bla</core-item>
-        </div>
       </paper-header-panel>
     </template>
 
