@@ -1,0 +1,84 @@
+paper-header-panel {
+  height: 1000px;
+  bottom: -6px;
+  --paper-header-panel-shadow: {
+      height: 15px;
+      bottom: -6px;
+      box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+  };
+
+}
+
+paper_toolbar {
+  color: rgb(255, 255, 255);
+  opacity: 0;
+}
+
+#content {
+}
+
+#content .card  {
+  padding:  2%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right:  30px;
+  background: linear-gradient(#d1d1d5, #c0c0cf);
+}
+
+#screenshot  {
+  width: 100%;
+}
+
+
+paper-button {
+      background-color: #3f51b5;
+      color: white;
+}
+
+#screenshot {
+    height: 600px;
+    width: 100%;
+}
+
+.screenshotCard {
+    width: 100%;
+    padding:  2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right:  30px;
+    background: linear-gradient(#d1d1d5, #c0c0cf);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+body {
+    font-family: arial,sans-serif;
+}
+
+#intro {
+  width: 40%;
+}
+
+#contact {
+  width: 40%;
+}
+
+#download {
+  width: 40%;
+}
+
+#youtubeCard{
+  width: 40%;
+}
+
+.circle {
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	}
