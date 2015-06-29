@@ -1,5 +1,6 @@
 
 <link rel="stylesheet" type="text/css" href="bunnies.css">
+<link rel="import" href="denim.html">
 
 <polymer-element name="bunnies-element">
 
@@ -13,7 +14,7 @@
   <paper-header-panel id="core_header_panel" mode="waterfall" shadow="true" z="5">
     <paper-toolbar id="core_toolbar" >
 
-      <div horizontal layout style="width: 100%">
+      <div horizontal layout style="width: 100%" id="title">
         Bumping Bunnies
       </div>
     </paper-toolbar>
@@ -34,11 +35,11 @@
 
       <paper-material elevation="3"  id="download" class="card">
         <paper-ripple fit></paper-ripple>
-        <h1 id="home">Download</h1>
+        <h1 id="download">Download</h1>
         <p>
 
           <a href="https://play.google.com/store/apps/details?id=de.oetting.bumpingbunnies">
-          <paper-button>Play store</paper-button>
+          <paper-button raised>Play store</paper-button>
           </a>
           <a href="http://www.amazon.co.uk/Hinnerk-Oetting-Bumping-Bunnies/dp/B00Z1NZOCA/ref=sr_1_1?ie=UTF8&qid=1435498039&sr=8-1&keywords=bumping+bunnies">
             <paper-button raised >Amazon</paper-button>
