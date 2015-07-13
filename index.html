@@ -72,13 +72,18 @@
 
 			<h1 class="page-header" id="download">Download</h1>
 			<p>
-				<a
-					href="https://play.google.com/store/apps/details?id=de.oetting.bumpingbunnies"
-					class="btn btn-primary btn-lg" role="button">Android &raquo;</a> <a
-					href="files/bumping-bunnies.jar" class="btn btn-primary btn-lg"
+				<a 	href="https://play.google.com/store/apps/details?id=de.oetting.bumpingbunnies"
+					class="btn btn-primary btn-lg" role="button">Play store &raquo;</a> 
+				<a 	href="http://www.amazon.com/gp/mas/dl/android?p=de.oetting.bumpingbunnies"
+					class="btn btn-primary btn-lg" role="button">Amazon Appstore &raquo;</a> 
+				<a	href="files/bumping-bunnies.jar" class="btn btn-primary btn-lg"
 					role="button">PC and MAC &raquo;</a>
 			</p>
 
+			<h1 class="page-header" id="instructions">Video</h1>
+				
+			 <div id="ytplayer"></div>
+			 
 			<h1 class="page-header" id="instructions">Instructions for PC
 				and MAC</h1>
 
@@ -110,6 +115,38 @@
 				 	 replaceEmail();
 				   });  
 				
+			
+			// Load the IFrame Player API code asynchronously.
+		    var tag = document.createElement('script');
+		    tag.src = "https://www.youtube.com/player_api";
+		    var firstScriptTag = document.getElementsByTagName('script')[0];
+		    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		    var player;
+		    function onYouTubePlayerAPIReady() {
+		      player = new YT.Player('ytplayer', {
+		        height: '460',
+		        width: '640',
+		        videoId: 'ckGZs2ei7nE'
+		      });
+		    }
+
+		    window.twttr = (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0],
+		    t = window.twttr || {};
+		  if (d.getElementById(id)) return t;
+		  js = d.createElement(s);
+		  js.id = id;
+		  js.src = "https://platform.twitter.com/widgets.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+
+		  t._e = [];
+		  t.ready = function(f) {
+		    t._e.push(f);
+		  };
+
+		  return t;
+		}(document, "script", "twitter-wjs"));
 		</script>
 		</div>
 	</section>
